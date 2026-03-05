@@ -4,11 +4,11 @@
 # Example: ./deploy/deploy-from-local.sh hasib@srv1310066
 
 HOST="${1:-hasib@srv1310066}"
-REMOTE_DIR="/var/www/Portfolio"
+REMOTE_DIR="/var/www/Portfolio/Personal-Potfolio"
 LOCAL_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo ">>> Syncing files to $HOST:$REMOTE_DIR"
-rsync -avz --delete \
+rsync -avz \
   --exclude 'node_modules' \
   --exclude '.next' \
   --exclude '.git' \

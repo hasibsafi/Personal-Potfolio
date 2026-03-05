@@ -2,7 +2,7 @@
 # Deploy script - run this on the VPS from /var/www/Portfolio
 set -e
 
-cd /var/www/Portfolio
+cd /var/www/Portfolio/Personal-Potfolio
 
 if [ -d .git ]; then
   echo ">>> Pulling latest changes..."
@@ -12,7 +12,7 @@ else
 fi
 
 echo ">>> Installing dependencies..."
-npm ci
+if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
 echo ">>> Building..."
 npm run build

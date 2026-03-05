@@ -14,8 +14,8 @@
 ### 1. Create project directory and set ownership
 
 ```bash
-sudo mkdir -p /var/www/Portfolio
-sudo chown -R hasib:hasib /var/www/Portfolio
+sudo mkdir -p /var/www/Portfolio/Personal-Potfolio
+sudo chown -R hasib:hasib /var/www/Portfolio/Personal-Potfolio
 ```
 
 ### 2. Deploy your code
@@ -30,12 +30,12 @@ cd Portfolio
 
 **Option B: Upload files**
 
-Upload the full project (excluding `node_modules` and `.next`) to `/var/www/Portfolio` via rsync, SFTP, or your preferred method.
+Upload the full project (excluding `node_modules` and `.next`) to `/var/www/Portfolio/Personal-Potfolio` via rsync, SFTP, or your preferred method.
 
 ### 3. Install dependencies and build
 
 ```bash
-cd /var/www/Portfolio
+cd /var/www/Portfolio/Personal-Potfolio
 npm ci
 npm run build
 ```
@@ -70,7 +70,7 @@ sudo certbot --nginx -d hasibsafi.com -d www.hasibsafi.com
 After pushing changes or uploading new files:
 
 ```bash
-cd /var/www/Portfolio
+cd /var/www/Portfolio/Personal-Potfolio
 chmod +x deploy/deploy.sh
 ./deploy/deploy.sh
 ```
@@ -78,7 +78,7 @@ chmod +x deploy/deploy.sh
 Or manually:
 
 ```bash
-cd /var/www/Portfolio
+cd /var/www/Portfolio/Personal-Potfolio
 git pull origin main   # if using git
 npm ci
 npm run build

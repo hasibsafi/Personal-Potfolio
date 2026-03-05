@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'portfolio',
-      cwd: '/var/www/Portfolio',
+      cwd: '/var/www/Portfolio/Personal-Potfolio',
       script: 'node_modules/.bin/next',
       args: 'start',
       instances: 1,
