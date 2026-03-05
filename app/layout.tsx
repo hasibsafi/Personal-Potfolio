@@ -14,8 +14,12 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hasibsafi.com'),
   title: 'Hasib Safi | Full-Stack Engineer',
   description: 'Full-stack engineer specializing in TypeScript, React, and Node.js — building production web applications with real-time systems, authentication, and performance optimization.',
+  openGraph: {
+    url: 'https://hasibsafi.com',
+  },
   icons: {
     icon: [
       { url: '/favicon48X48.png', sizes: '48x48' },
