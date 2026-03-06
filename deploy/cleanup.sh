@@ -16,6 +16,13 @@ sudo rm -f /etc/nginx/sites-enabled/hasibsafi.com
 sudo rm -f /etc/nginx/sites-available/hasibsafi.com
 sudo nginx -t && sudo systemctl reload nginx
 
+echo ">>> Removing duplicate files from parent Portfolio folder..."
+cd /var/www/Portfolio
+sudo rm -rf app components hooks lib public styles deploy 2>/dev/null || true
+sudo rm -f package.json package-lock.json pnpm-lock.yaml 2>/dev/null || true
+sudo rm -f next.config.mjs tsconfig.json tailwind.config.ts postcss.config.mjs 2>/dev/null || true
+sudo rm -f components.json next-env.d.ts .gitignore DEPLOY.md ecosystem.config.cjs 2>/dev/null || true
+
 echo ">>> Removing project directory..."
 sudo rm -rf /var/www/Portfolio/Personal-Potfolio
 
