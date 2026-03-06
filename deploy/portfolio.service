@@ -1,0 +1,16 @@
+[Unit]
+Description=Hasib Safi Portfolio (Next.js)
+After=network.target
+
+[Service]
+Type=simple
+User=hasib
+WorkingDirectory=/var/www/Portfolio/Personal-Potfolio
+ExecStart=/usr/bin/npm run start
+Restart=always
+RestartSec=5
+Environment=NODE_ENV=production
+Environment=PORT=3005
+
+[Install]
+WantedBy=multi-user.target
